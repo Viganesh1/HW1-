@@ -4,7 +4,7 @@
 
 using namespace std;
 
-
+// dot product
 double dot_product (vector<double> w, vector<double> x) {
 	double z = 0;
 	int i;
@@ -17,13 +17,11 @@ double dot_product (vector<double> w, vector<double> x) {
 }
 
 int main() {
-	vector <double> w{ 0.0001, 0.0001, 0.0001 };
-	vector <double> x{ 124, 31.89, 20.945 };
-	double z = dot_product (w,x);
+	vector <double> w{ 0.0001, 0.0001, 0.0001 }; //given values for vector w
+	vector <double> x{ 124, 31.89, 20.945 };     //given values for vector x
+	double z = dot_product (w,x);				 // fucntion dot product
 
-	cout << "w = {0.0001, 0.0001, 0.0001}"  << endl;
-	cout << "x = {124, 31.89, 20.945}" << endl;
-	cout << "z = w^Tx = " << z << endl;
+	cout << "z = w^Tx = " << z << endl;			// output of z after dotproduct
 
 	return 0;
 
