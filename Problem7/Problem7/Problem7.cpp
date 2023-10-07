@@ -2,7 +2,7 @@
 #include <vector>
 #include <numeric>
 using namespace std;
-
+//function gradient weights
 double gradient_weights(double delta, vector<double>& w, const vector<double>& x, double y) {
     vector<double> dw(w.size(), 0.0);  
     for (int i = 0; i < w.size(); i++) {
@@ -10,7 +10,7 @@ double gradient_weights(double delta, vector<double>& w, const vector<double>& x
     }
     return dw[0]; 
 }
-
+//function update weights
 void update_weights(vector<double>& w, const vector<double>& dw, double a) {
     for (int i = 0; i < w.size(); i++) {
         w[i] -= a * dw[i];  
@@ -25,6 +25,7 @@ int main() {
     int y = 1;
     update_weights(w, dw, a);
     
+    // output of w
     cout << "w = ";
     cout << "{ ";
     for (int i = 0; i < w.size(); i++) {
